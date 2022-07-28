@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 1.9rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1.05rem;
+}
+li{
+    font-size: 1.05rem;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+/* Header */
+header{
+    background-color: #D9D9D9;
+}
+/* Logo */
+header .logo{
+    margin: 0;
+    padding: 20px 25px;
+    font-weight: bold;
+    color:cadetblue;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Barra de Navegacion */
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+header ul li{
+    display: block;
+    padding: 10px;
+}
+header a{
+    color: cadetblue;
+    font-weight: bold;
+}
+header a:hover{
+    color: #404040;
+}
+/* Banner */
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(multimedia/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+#hero h1{
+    color: white;
+}
+#hero a{
+    font-size: 1.40rem;
+    margin-top: 20px;
+    color: white;
+    background-color: cadetblue;
+    border: 2px solid rgb(48, 79, 80);
+    border-radius: 7px;
+}
+/* Quienes Somos */
+#somos{
+    background-color: #F2F2F2;
+}
+#somos .container{
+    text-align: center;
+    padding: 200px 100px;
+}
+#somos h2{
+    color: cadetblue;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#somos p{
+    font-weight: bold;
+}
+/* Nuestros Trabajos */
+#nuestrosTrabajos{
+    background-color: #D9D9D9;
+}
+#nuestrosTrabajos .container{
+    text-align: center;
+    padding: 150px 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto auto auto auto;
+    grid-template-areas:
+    "titulo "
+    "manuales"
+    "pegadora"
+    "troquelados"
+    ;
+    grid-gap: 20px;
+}
+#nuestrosTrabajos h2{
+    color: cadetblue;
+}
+#nuestrosTrabajos h3{
+    color: cadetblue;
+    padding: 10px;
+}
+#nuestrosTrabajos p{
+    color: white;
+    padding: 10px;
+    display: none;
+}
+#nuestrosTrabajos a{
+    color: white;
+    background-color: cadetblue;
+    border: 1px solid rgb(48, 79, 80);
+    border-radius: 7px;
+}
+.titulo{
+    grid-area: titulo;
+}
+#nuestrosTrabajos .cards{
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.cards1{
+    height: auto;
+    grid-area: manuales;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    
+    ,url(multimedia/trabajomanual.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.cards2{
+    height: auto;
+    grid-area: pegadora;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    
+    ,url(multimedia/trabajomanual.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.cards3{
+    height: auto;
+    grid-area: troquelados;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    
+    ,url(multimedia/trabajomanual.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* Ubicacion */
+#ubicacion{
+    background-color: #404040;
+}
+#ubicacion .container{
+    padding: 150px 0px;
+    text-align: center;
+}
+#ubicacion h2{
+    font-weight: bold;
+    color: #F2F2F2;
+    padding-bottom: 20px;
+}
+#ubicacion p{
+    color: #F2F2F2;
+    padding-bottom: 20px;
+}
+/* Contacto */
+#contacto{
+    background-color: #404040;
+}
+#contacto .container{
+    padding: 150px 0px;
+    display: flex;
+    justify-content: center;
+}
+#contacto .formulario{
+    width: 400px;
+    padding: 30px;
+    border: 2px solid cadetblue;
+    background-color: #F2F2F2;
+    box-shadow: 7px 13px 37px #000;
+}
+#contacto h2{
+    padding-bottom: 10px;
+}
+#contacto .controls{
+    width: 100%;
+    background-color: #D9D9D9;
+    padding: 7px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: 1px solid cadetblue;
+}
+#contacto ::placeholder{
+    color: rgb(60, 100, 100);
+}
+/* Footer */
+footer{
+    background-color: #F2F2F2;
+}
+footer .container{
+    height: 110px;
+    text-align: center;
+}
+footer p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer a{
+    padding-bottom: 10px;
+    color: cadetblue;
+    font-size: 45px;
+}
+footer a:hover{
+    color: rgb(60, 100, 100);
+}
+/* Desktop */
+@media only screen and (min-width:979px){
+    html{
+        scroll-behavior: smooth;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    header ul li{
+        display: inline-block;
+    }
+    #nuestrosTrabajos p{
+        display: block;
+    }
+    /* Boton Subir */
+    .subir{
+        height: 50px;
+        width: 50px;
+        background-color: rgba(0,0,0,0.1);
+        text-align: center;
+        line-height: 50px;
+        border: 2px solid cadetblue;
+        position: fixed;
+        bottom: 20px;
+        right: 5px;
+        border-radius: 50%;
+        font-size: 25px;
+        color: black;
+    }
+}
