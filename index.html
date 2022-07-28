@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <title>LyR Packaging</title>
 </head>
@@ -26,7 +27,7 @@
 
     <section id="hero">
         <h1>Pegados de Estuches y Troquelados</h1>
-        <a href="">Nuestros Trabajos</a>
+        <a href="#nuestrosTrabajos">Nuestros Trabajos</a>
     </section>
 
     <section id="somos">
@@ -40,17 +41,17 @@
     <section id="nuestrosTrabajos">
         <div class="container">
             <h2 class="titulo">Nuestros Trabajos</h2>
-            <div class="cards1 cards">
+            <div class="cards1 cards" data-aos="zoom-in">
                 <h3>Trabajos Manuales</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quia similique deleniti corrupti aut itaque, eius, necessitatibus perferendis, qui aspernatur quo provident iste quae? Tenetur consequatur asperiores voluptas numquam unde?</p>
                 <a href="pages/portfolio.html">+info</a>
             </div>
-            <div class="cards2 cards">
+            <div class="cards2 cards" data-aos="zoom-in">
                 <h3>Pegadora de Estuches</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quia similique deleniti corrupti aut itaque, eius, necessitatibus perferendis, qui aspernatur quo provident iste quae? Tenetur consequatur asperiores voluptas numquam unde?</p>
                 <a href="pages/portfolio.html">+info</a>
             </div>
-            <div class="cards3 cards">
+            <div class="cards3 cards" data-aos="zoom-in">
                 <h3>Troquelados</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quia similique deleniti corrupti aut itaque, eius, necessitatibus perferendis, qui aspernatur quo provident iste quae? Tenetur consequatur asperiores voluptas numquam unde?</p>
                 <a href="pages/portfolio.html">+info</a>
@@ -69,5 +70,9 @@
     <a href="#" class="subir">
         <i class="fa-solid fa-angle-up"></i>
     </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
