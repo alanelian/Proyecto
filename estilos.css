@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style: none;
-    text-decoration: none;
+    text-decoration: none !important; 
 }
 h1{
     font-size: 2.8rem;
@@ -69,7 +69,7 @@ header a:hover{
     background-image: url(multimedia/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
 }
 #hero h1{
     color: white;
@@ -282,12 +282,11 @@ footer{
     background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
 }
 footer .container{
-    height: 110px;
+    height: 131px;
     text-align: center;
 }
 footer p{
     padding-top: 10px;
-    padding-bottom: 10px;
 }
 footer a{
     padding-bottom: 10px;
@@ -309,6 +308,7 @@ footer a:hover{
     header .container{
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
     }
     header nav{
         flex-direction: row;
