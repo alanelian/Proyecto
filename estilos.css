@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style: none;
-    text-decoration: none !important; 
+    text-decoration: none !important;
 }
 h1{
     font-size: 2.8rem;
@@ -25,41 +25,21 @@ li{
     max-width: 1400px;
     margin: auto;
 }
-/* Header */
+/* Header inicio */
 header{
     background-color: #D9D9D9;
-}
-/* Logo */
-header .logo{
-    margin: 0;
-    padding: 20px 25px;
-    font-weight: bold;
-    color:cadetblue;
-}
-header .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* Barra de Navegacion */
-header nav{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 20px;
-}
-header ul li{
-    display: block;
     padding: 10px;
+    z-index: 2;
 }
-header a{
-    color: #5f9ea0;
+.navbar a{
+    color: cadetblue !important;
     font-weight: bold;
 }
-header a:hover{
-    color: #404040;
+.navbar-toggler{
+    background-color: #5f9ea0;
 }
-/* Banner */
+/* Header fin */
+/* Banner inicio */
 #hero{
     display: flex;
     flex-direction: column;
@@ -99,7 +79,8 @@ header a:hover{
 #hero a:hover{
     font-size: 1.45rem;
 }
-/* Quienes Somos */
+/* Banner fin */
+/* Quienes Somos inicio */
 #somos{
     background-color: #F2F2F2;
 }
@@ -115,7 +96,8 @@ header a:hover{
 #somos p{
     font-weight: bold;
 }
-/* Nuestros Trabajos */
+/* Quienes somos fin */
+/* Nuestros trabajos inicio */
 #nuestrosTrabajos{
     background-color: #D9D9D9;
 }
@@ -167,7 +149,7 @@ header a:hover{
         rgb(0,0,0,0.5),
         rgb(0,0,0,0.5)
     )
-    
+
     ,url(multimedia/trabajomanual.jpg);
     background-position: center;
     background-size: cover;
@@ -180,7 +162,7 @@ header a:hover{
         rgb(0,0,0,0.5),
         rgb(0,0,0,0.5)
     )
-    
+
     ,url(multimedia/trabajomanual.jpg);
     background-position: center;
     background-size: cover;
@@ -193,11 +175,13 @@ header a:hover{
         rgb(0,0,0,0.5),
         rgb(0,0,0,0.5)
     )
-    
+
     ,url(multimedia/trabajomanual.jpg);
     background-position: center;
     background-size: cover;
 }
+/* Nuestros trabajos fin */
+/* Portfolio inicio */
 #nuestrosTrabajosPortfolio{
     background-color: #404040;
 }
@@ -205,14 +189,6 @@ header a:hover{
     padding: 150px 50px;
     text-align: center;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: repeat(4, 200px);
-    grid-template-areas: 
-    "titulo"
-    "manuales"
-    "pegadora"
-    "troquelados";
 }
 #nuestrosTrabajosPortfolio h2{
     color: cadetblue;
@@ -220,21 +196,21 @@ header a:hover{
 #nuestrosTrabajosPortfolio h3{
     color: cadetblue;
 }
-.manuales{
-    grid-area: manuales;
+.carousel-inner{
+    width: 90%;
+    margin: 0 auto;
 }
-.pegadora{
-    grid-area: pegadora;
+.carousel-inner .carousel-item img{
+    height: 90vh;
 }
-.troquelados{
-    grid-area: troquelados;
-}
-/* Ubicacion */
+/* Portfolio fin */
+/* Ubicacion inicio */
 #ubicacion{
     background-color: #404040;
 }
 #ubicacion .container{
-    padding: 150px 0px;
+    height: auto;
+    padding: 218px 0px;
     text-align: center;
 }
 #ubicacion h2{
@@ -243,10 +219,16 @@ header a:hover{
     padding-bottom: 20px;
 }
 #ubicacion p{
+    font-size: 20px;
     color: #F2F2F2;
     padding-bottom: 20px;
 }
-/* Contacto */
+.mapa{
+    height: 300px;
+    width: 300px;
+}
+/* Portfolio fin */
+/* Contacto inicio */
 #contacto{
     background-color: #404040;
 }
@@ -265,7 +247,7 @@ header a:hover{
 #contacto h2{
     padding-bottom: 10px;
 }
-#contacto .controls{
+#contacto .form-controls{
     width: 100%;
     background-color: #D9D9D9;
     padding: 7px;
@@ -276,27 +258,30 @@ header a:hover{
 #contacto ::placeholder{
     color: rgb(60, 100, 100);
 }
-/* Footer */
+/* Contacto fin */
+/* Footer inicio */
 footer{
     background-color: #404040;
     background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
 }
 footer .container{
-    height: 131px;
     text-align: center;
 }
 footer p{
     padding-top: 10px;
 }
 footer a{
-    padding-bottom: 10px;
     color: cadetblue;
     font-size: 45px;
 }
 footer a:hover{
     color: rgb(60, 100, 100);
 }
-/* Desktop */
+/* Footer fin */
+.subir{
+    display: none;
+}
+/* Desktop inicio */
 @media only screen and (min-width:979px){
     html{
         scroll-behavior: smooth;
@@ -310,18 +295,19 @@ footer a:hover{
         justify-content: space-between;
         align-items: flex-end;
     }
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-    }
-    header ul li{
-        display: inline-block;
+    .navbar .navbar-nav .nav-link:hover{
+        color: #404040 !important;
     }
     #nuestrosTrabajos p{
         display: block;
     }
-    /* Boton Subir */
+    #ubicacion .mapa{
+        height: 500px;
+        width: 500px;
+    }
+    /* Boton subir inicio */
     .subir{
+        display: block;
         height: 50px;
         width: 50px;
         background-color: rgba(0,0,0,0.1);
@@ -329,7 +315,7 @@ footer a:hover{
         line-height: 50px;
         border: 2px solid cadetblue;
         position: fixed;
-        bottom: 20px;
+        bottom: 10px;
         right: 5px;
         border-radius: 50%;
         font-size: 25px;
@@ -338,5 +324,8 @@ footer a:hover{
     }
     .subir:hover{
         background-color: rgb(60, 100, 100);
+        color: black;
     }
+    /* Boton subir fin */
 }
+/* Desktop fin */
