@@ -1,331 +1,346 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    list-style: none;
-    text-decoration: none !important;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
+  text-decoration: none !important;
 }
-h1{
-    font-size: 2.8rem;
+
+h1 {
+  font-size: 2.8rem;
 }
-h2{
-    font-size: 1.9rem;
+
+h2 {
+  font-size: 1.9rem;
 }
-h3{
-    font-size: 1.5rem;
+
+h3 {
+  font-size: 1.5rem;
 }
-p{
-    font-size: 1.05rem;
+
+p {
+  font-size: 1.05rem;
 }
-li{
-    font-size: 1.05rem;
+
+li {
+  font-size: 1.05rem;
 }
-.container{
-    max-width: 1400px;
-    margin: auto;
+
+.container {
+  max-width: 1400px;
+  margin: auto;
 }
+
 /* Header inicio */
-header{
-    background-color: #D9D9D9;
-    padding: 10px;
-    z-index: 2;
+header {
+  background-color: #D9D9D9;
+  padding: 10px;
+  z-index: 2;
 }
-.navbar a{
-    color: cadetblue !important;
-    font-weight: bold;
+
+.navbar a {
+  color: cadetblue !important;
+  font-weight: bold;
 }
-.navbar-toggler{
-    background-color: #5f9ea0;
+
+.navbar-toggler {
+  background-color: #5f9ea0;
 }
+
 /* Header fin */
 /* Banner inicio */
-#hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url(multimedia/hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(multimedia/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
-#hero h1{
-    color: white;
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-delay: 5s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+#hero h1 {
+  color: white;
+  animation-name: aparecer;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
-@keyframes aparecer{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+#hero a {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: white;
+  background-color: cadetblue;
+  border: 2px solid rgb(48, 79, 80);
+  border-radius: 7px;
+  transition: all 2.7s;
 }
-#hero a{
-    font-size: 1.40rem;
-    margin-top: 20px;
-    color: white;
-    background-color: cadetblue;
-    border: 2px solid rgb(48, 79, 80);
-    border-radius: 7px;
-    transition: all 2.7s;
+#hero a:hover {
+  font-size: 1.45rem;
 }
-#hero a:hover{
-    font-size: 1.45rem;
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* Banner fin */
 /* Quienes Somos inicio */
-#somos{
-    background-color: #F2F2F2;
+#somos {
+  background-color: #F2F2F2;
 }
-#somos .container{
-    text-align: center;
-    padding: 200px 100px;
+#somos .container {
+  text-align: center;
+  padding: 200px 100px;
 }
-#somos h2{
-    color: cadetblue;
-    font-weight: bold;
-    margin-bottom: 20px;
+#somos h2 {
+  color: cadetblue;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-#somos p{
-    font-weight: bold;
+#somos p {
+  font-weight: bold;
 }
+
 /* Quienes somos fin */
 /* Nuestros trabajos inicio */
-#nuestrosTrabajos{
-    background-color: #D9D9D9;
+#nuestrosTrabajos {
+  background-color: #D9D9D9;
 }
-#nuestrosTrabajos .container{
-    text-align: center;
-    padding: 150px 50px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row: auto auto auto auto;
-    grid-template-areas:
-    "titulo "
-    "manuales"
-    "pegadora"
-    "troquelados"
-    ;
-    grid-gap: 20px;
+#nuestrosTrabajos .container {
+  text-align: center;
+  padding: 150px 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: auto auto auto auto;
+  grid-template-areas: "titulo " "manuales" "pegadora" "troquelados";
+  grid-gap: 20px;
 }
-#nuestrosTrabajos h2{
-    color: cadetblue;
+#nuestrosTrabajos h2 {
+  color: cadetblue;
 }
-#nuestrosTrabajos h3{
-    color: cadetblue;
-    padding: 10px;
+#nuestrosTrabajos h3 {
+  color: cadetblue;
+  padding: 10px;
 }
-#nuestrosTrabajos p{
-    color: white;
-    padding: 10px;
-    display: none;
+#nuestrosTrabajos p {
+  color: white;
+  padding: 10px;
+  display: none;
 }
-#nuestrosTrabajos a{
-    color: white;
-    background-color: cadetblue;
-    border: 1px solid rgb(48, 79, 80);
-    border-radius: 7px;
+#nuestrosTrabajos a {
+  color: white;
+  background-color: cadetblue;
+  border: 1px solid rgb(48, 79, 80);
+  border-radius: 7px;
 }
-.titulo{
-    grid-area: titulo;
+#nuestrosTrabajos .titulo {
+  grid-area: titulo;
 }
-#nuestrosTrabajos .cards{
-    padding: 50px;
-    margin: 10px;
-    border-radius: 10px;
+#nuestrosTrabajos .cards {
+  padding: 50px;
+  margin: 10px;
+  border-radius: 10px;
 }
-.cards1{
-    height: auto;
-    grid-area: manuales;
-    background-image: linear-gradient(
-        0deg,
-        rgb(0,0,0,0.5),
-        rgb(0,0,0,0.5)
-    )
+#nuestrosTrabajos .cards1 {
+  height: auto;
+  grid-area: manuales;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(multimedia/trabajomanual.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#nuestrosTrabajos .cards2 {
+  height: auto;
+  grid-area: pegadora;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(multimedia/trabajomanual.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#nuestrosTrabajos .cards3 {
+  height: auto;
+  grid-area: troquelados;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(multimedia/trabajomanual.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
-    ,url(multimedia/trabajomanual.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.cards2{
-    height: auto;
-    grid-area: pegadora;
-    background-image: linear-gradient(
-        0deg,
-        rgb(0,0,0,0.5),
-        rgb(0,0,0,0.5)
-    )
-
-    ,url(multimedia/trabajomanual.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.cards3{
-    height: auto;
-    grid-area: troquelados;
-    background-image: linear-gradient(
-        0deg,
-        rgb(0,0,0,0.5),
-        rgb(0,0,0,0.5)
-    )
-
-    ,url(multimedia/trabajomanual.jpg);
-    background-position: center;
-    background-size: cover;
-}
 /* Nuestros trabajos fin */
 /* Portfolio inicio */
-#nuestrosTrabajosPortfolio{
-    background-color: #404040;
+#nuestrosTrabajosPortfolio {
+  background-color: #404040;
 }
-#nuestrosTrabajosPortfolio .container{
-    padding: 150px 50px;
-    text-align: center;
-    height: auto;
+
+#nuestrosTrabajosPortfolio .container {
+  padding: 150px 50px;
+  text-align: center;
+  height: auto;
 }
-#nuestrosTrabajosPortfolio h2{
-    color: cadetblue;
+
+#nuestrosTrabajosPortfolio h2 {
+  color: cadetblue;
 }
-#nuestrosTrabajosPortfolio h3{
-    color: cadetblue;
+
+#nuestrosTrabajosPortfolio h3 {
+  color: cadetblue;
 }
-.carousel-inner{
-    width: 90%;
-    margin: 0 auto;
+
+.carousel-inner {
+  width: 90%;
+  margin: 0 auto;
 }
-.carousel-inner .carousel-item img{
-    height: 90vh;
+
+.carousel-inner .carousel-item img {
+  height: 90vh;
 }
+
 /* Portfolio fin */
 /* Ubicacion inicio */
-#ubicacion{
-    background-color: #404040;
+#ubicacion {
+  background-color: #404040;
 }
-#ubicacion .container{
-    height: auto;
-    padding: 218px 0px;
-    text-align: center;
+
+#ubicacion .container {
+  height: auto;
+  padding: 218px 0px;
+  text-align: center;
 }
-#ubicacion h2{
-    font-weight: bold;
-    color: #F2F2F2;
-    padding-bottom: 20px;
+
+#ubicacion h2 {
+  font-weight: bold;
+  color: #F2F2F2;
+  padding-bottom: 20px;
 }
-#ubicacion p{
-    font-size: 20px;
-    color: #F2F2F2;
-    padding-bottom: 20px;
+
+#ubicacion p {
+  font-size: 20px;
+  color: #F2F2F2;
+  padding-bottom: 20px;
 }
-.mapa{
-    height: 300px;
-    width: 300px;
+
+.mapa {
+  height: 300px;
+  width: 300px;
 }
+
 /* Portfolio fin */
 /* Contacto inicio */
-#contacto{
-    background-color: #404040;
+#contacto {
+  background-color: #404040;
 }
-#contacto .container{
-    padding: 150px 0px;
-    display: flex;
-    justify-content: center;
+
+#contacto .container {
+  padding: 150px 0px;
+  display: flex;
+  justify-content: center;
 }
-#contacto .formulario{
-    width: 400px;
-    padding: 30px;
-    border: 2px solid cadetblue;
-    background-color: #F2F2F2;
-    box-shadow: 7px 13px 37px #000;
+
+#contacto .formulario {
+  width: 400px;
+  padding: 30px;
+  border: 2px solid cadetblue;
+  background-color: #F2F2F2;
+  box-shadow: 7px 13px 37px #000;
 }
-#contacto h2{
-    padding-bottom: 10px;
+
+#contacto h2 {
+  padding-bottom: 10px;
 }
-#contacto .form-controls{
-    width: 100%;
-    background-color: #D9D9D9;
-    padding: 7px;
-    border-radius: 4px;
-    margin-bottom: 5px;
-    border: 1px solid cadetblue;
+
+#contacto .form-controls {
+  width: 100%;
+  background-color: #D9D9D9;
+  padding: 7px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 1px solid cadetblue;
 }
-#contacto ::placeholder{
-    color: rgb(60, 100, 100);
+
+#contacto ::placeholder {
+  color: rgb(60, 100, 100);
 }
+
 /* Contacto fin */
 /* Footer inicio */
-footer{
-    background-color: #404040;
-    background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
+footer {
+  background-color: #404040;
+  background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
 }
-footer .container{
-    text-align: center;
+
+footer .container {
+  text-align: center;
 }
-footer p{
-    padding-top: 10px;
+
+footer p {
+  padding-top: 10px;
 }
-footer a{
-    color: cadetblue;
-    font-size: 45px;
+
+footer a {
+  color: cadetblue;
+  font-size: 45px;
 }
-footer a:hover{
-    color: rgb(60, 100, 100);
+
+footer a:hover {
+  color: rgb(60, 100, 100);
 }
+
 /* Footer fin */
-.subir{
-    display: none;
+.subir {
+  display: none;
 }
+
 /* Desktop inicio */
-@media only screen and (min-width:979px){
-    html{
-        scroll-behavior: smooth;
-    }
-    header{
-        position: fixed;
-        width: 100%;
-    }
-    header .container{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-    .navbar .navbar-nav .nav-link:hover{
-        color: #404040 !important;
-    }
-    #nuestrosTrabajos p{
-        display: block;
-    }
-    #ubicacion .mapa{
-        height: 500px;
-        width: 500px;
-    }
-    /* Boton subir inicio */
-    .subir{
-        display: block;
-        height: 50px;
-        width: 50px;
-        background-color: rgba(0,0,0,0.1);
-        text-align: center;
-        line-height: 50px;
-        border: 2px solid cadetblue;
-        position: fixed;
-        bottom: 10px;
-        right: 5px;
-        border-radius: 50%;
-        font-size: 25px;
-        color: black;
-        transition: all 1s;
-    }
-    .subir:hover{
-        background-color: rgb(60, 100, 100);
-        color: black;
-    }
-    /* Boton subir fin */
+@media only screen and (min-width: 979px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+  }
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .navbar .navbar-nav .nav-link:hover {
+    color: #404040 !important;
+  }
+  #nuestrosTrabajos p {
+    display: block;
+  }
+  #ubicacion .mapa {
+    height: 500px;
+    width: 500px;
+  }
+  /* Boton subir inicio */
+  .subir {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid cadetblue;
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: black;
+    transition: all 1s;
+  }
+  .subir:hover {
+    background-color: rgb(60, 100, 100);
+    color: black;
+  }
+  /* Boton subir fin */
 }
 /* Desktop fin */
+
+/*# sourceMappingURL=estilos.css.map */
