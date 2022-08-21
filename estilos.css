@@ -63,11 +63,16 @@ header {
 }
 #hero h1 {
   color: white;
-  animation-name: aparecer;
-  animation-duration: 2s;
-  animation-delay: 5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 #hero a {
   font-size: 1.4rem;
@@ -80,6 +85,15 @@ header {
 }
 #hero a:hover {
   font-size: 1.45rem;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes aparecer {
@@ -112,6 +126,8 @@ header {
 /* Nuestros trabajos inicio */
 #nuestrosTrabajos {
   background-color: #D9D9D9;
+  color: cadetblue;
+  padding: 10px;
 }
 #nuestrosTrabajos .container {
   text-align: center;
@@ -125,17 +141,12 @@ header {
 #nuestrosTrabajos h2 {
   color: cadetblue;
 }
-#nuestrosTrabajos h3 {
-  color: cadetblue;
-  padding: 10px;
-}
 #nuestrosTrabajos p {
   color: white;
   padding: 10px;
   display: none;
 }
 #nuestrosTrabajos a {
-  color: white;
   background-color: cadetblue;
   border: 1px solid rgb(48, 79, 80);
   border-radius: 7px;
@@ -175,17 +186,14 @@ header {
 #nuestrosTrabajosPortfolio {
   background-color: #404040;
 }
-
 #nuestrosTrabajosPortfolio .container {
   padding: 150px 50px;
   text-align: center;
   height: auto;
 }
-
 #nuestrosTrabajosPortfolio h2 {
   color: cadetblue;
 }
-
 #nuestrosTrabajosPortfolio h3 {
   color: cadetblue;
 }
@@ -204,23 +212,20 @@ header {
 #ubicacion {
   background-color: #404040;
 }
-
 #ubicacion .container {
   height: auto;
   padding: 218px 0px;
   text-align: center;
 }
-
 #ubicacion h2 {
   font-weight: bold;
   color: #F2F2F2;
   padding-bottom: 20px;
 }
-
 #ubicacion p {
   font-size: 20px;
   color: #F2F2F2;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .mapa {
@@ -228,18 +233,16 @@ header {
   width: 300px;
 }
 
-/* Portfolio fin */
+/* Ubicacion fin */
 /* Contacto inicio */
 #contacto {
   background-color: #404040;
 }
-
 #contacto .container {
   padding: 150px 0px;
   display: flex;
   justify-content: center;
 }
-
 #contacto .formulario {
   width: 400px;
   padding: 30px;
@@ -247,11 +250,9 @@ header {
   background-color: #F2F2F2;
   box-shadow: 7px 13px 37px #000;
 }
-
 #contacto h2 {
   padding-bottom: 10px;
 }
-
 #contacto .form-controls {
   width: 100%;
   background-color: #D9D9D9;
@@ -260,7 +261,12 @@ header {
   margin-bottom: 5px;
   border: 1px solid cadetblue;
 }
-
+#contacto ::-moz-placeholder {
+  color: rgb(60, 100, 100);
+}
+#contacto :-ms-input-placeholder {
+  color: rgb(60, 100, 100);
+}
 #contacto ::placeholder {
   color: rgb(60, 100, 100);
 }
@@ -271,20 +277,16 @@ footer {
   background-color: #404040;
   background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
 }
-
 footer .container {
   text-align: center;
 }
-
 footer p {
   padding-top: 10px;
 }
-
 footer a {
   color: cadetblue;
   font-size: 45px;
 }
-
 footer a:hover {
   color: rgb(60, 100, 100);
 }
@@ -292,6 +294,43 @@ footer a:hover {
 /* Footer fin */
 .subir {
   display: none;
+}
+
+.maps--cursive {
+  font-size: 25px;
+  color: red;
+  font-family: cursive;
+  text-shadow: 0 0 5px #000;
+}
+
+.maps--fantasy {
+  font-size: 25px;
+  color: yellow;
+  font-family: fantasy;
+  text-shadow: 0 0 5px #000;
+}
+
+.maps--serif {
+  font-size: 25px;
+  color: blue;
+  font-family: serif;
+  text-shadow: 0 0 5px #000;
+}
+
+.extend, .extend--nuevo {
+  letter-spacing: 3px;
+  color: #404040;
+  font-size: 18px;
+}
+
+.extend--nuevo {
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px #000;
+}
+
+.mixinbox {
+  text-align: center;
+  padding: 200px 100px;
 }
 
 /* Desktop inicio */
@@ -340,7 +379,36 @@ footer a:hover {
     color: black;
   }
   /* Boton subir fin */
+  .maps--cursive {
+    font-size: 25px;
+    color: red;
+    font-family: cursive;
+    text-shadow: 0 0 5px #000;
+  }
+  .maps--fantasy {
+    font-size: 25px;
+    color: yellow;
+    font-family: fantasy;
+    text-shadow: 0 0 5px #000;
+  }
+  .maps--serif {
+    font-size: 25px;
+    color: blue;
+    font-family: serif;
+    text-shadow: 0 0 5px #000;
+  }
+  .extend, .extend--nuevo {
+    letter-spacing: 3px;
+    color: #404040;
+    font-size: 18px;
+  }
+  .extend--nuevo {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px #000;
+  }
+  .mixinbox {
+    text-align: center;
+    padding: 200px 100px;
+  }
 }
-/* Desktop fin */
-
-/*# sourceMappingURL=estilos.css.map */
+/* Desktop fin *//*# sourceMappingURL=estilos.css.map */

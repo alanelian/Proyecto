@@ -54,7 +54,7 @@ header{
     background-repeat: no-repeat;
     height: 100vh;
 
-    h1{
+    & h1{
         color: white;
         animation-name: aparecer;
         animation-duration: 2s;
@@ -63,7 +63,7 @@ header{
         animation-iteration-count: infinite;
     }
 
-    a{
+    & a{
         font-size: 1.40rem;
         margin-top: 20px;
         color: white;
@@ -73,7 +73,7 @@ header{
         transition: all 2.7s;
     }
 
-    a:hover{
+    & a:hover{
         font-size: 1.45rem;
     }
 }
@@ -110,7 +110,7 @@ header{
 #nuestrosTrabajos{
     background-color: $color1;
 
-    .container{
+    & .container{
         text-align: center;
         padding: 150px 50px;
         display: grid;
@@ -125,39 +125,39 @@ header{
         grid-gap: 20px;
     }
 
-    h2{
+    & h2{
         color: cadetblue;
     }
 
-    h3{
+    // & h3{
         color: cadetblue;
         padding: 10px;
-    }
+    // }
 
-    p{
+    & p{
         color: white;
         padding: 10px;
         display: none;
     }
 
-    a{
-        color: white;
+    & a{
+        // color: white;
         background-color: cadetblue;
         border: 1px solid rgb(48, 79, 80);
         border-radius: 7px;
     }
 
-    .titulo{
+    & .titulo{
         grid-area: titulo;
     }
 
-    .cards{
+    & .cards{
         padding: 50px;
         margin: 10px;
         border-radius: 10px;
     }
 
-    .cards1{
+    & .cards1{
         height: auto;
         grid-area: manuales;
         background-image: linear-gradient(
@@ -171,7 +171,7 @@ header{
         background-size: cover;
     }
 
-    .cards2{
+    & .cards2{
         height: auto;
         grid-area: pegadora;
         background-image: linear-gradient(
@@ -185,7 +185,7 @@ header{
         background-size: cover;
     }
 
-    .cards3{
+    & .cards3{
         height: auto;
         grid-area: troquelados;
         background-image: linear-gradient(
@@ -203,17 +203,18 @@ header{
 /* Portfolio inicio */
 #nuestrosTrabajosPortfolio{
     background-color: $color3;
-}
-#nuestrosTrabajosPortfolio .container{
+
+    & .container{
     padding: 150px 50px;
     text-align: center;
     height: auto;
 }
-#nuestrosTrabajosPortfolio h2{
+    & h2{
     color: cadetblue;
 }
-#nuestrosTrabajosPortfolio h3{
+    & h3{
     color: cadetblue;
+}
 }
 .carousel-inner{
     width: 90%;
@@ -226,47 +227,48 @@ header{
 /* Ubicacion inicio */
 #ubicacion{
     background-color: $color3;
-}
-#ubicacion .container{
+
+    & .container{
     height: auto;
     padding: 218px 0px;
     text-align: center;
 }
-#ubicacion h2{
+    & h2{
     font-weight: bold;
     color: #F2F2F2;
     padding-bottom: 20px;
 }
-#ubicacion p{
+    & p{
     font-size: 20px;
     color: #F2F2F2;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+}
 }
 .mapa{
     height: 300px;
     width: 300px;
 }
-/* Portfolio fin */
+/* Ubicacion fin */
 /* Contacto inicio */
 #contacto{
     background-color: $color3;
-}
-#contacto .container{
+
+    & .container{
     padding: 150px 0px;
     display: flex;
     justify-content: center;
 }
-#contacto .formulario{
+    & .formulario{
     width: 400px;
     padding: 30px;
     border: 2px solid cadetblue;
     background-color: #F2F2F2;
     box-shadow: 7px 13px 37px #000;
 }
-#contacto h2{
+    & h2{
     padding-bottom: 10px;
 }
-#contacto .form-controls{
+    & .form-controls{
     width: 100%;
     background-color: #D9D9D9;
     padding: 7px;
@@ -274,31 +276,68 @@ header{
     margin-bottom: 5px;
     border: 1px solid cadetblue;
 }
-#contacto ::placeholder{
+    & ::placeholder{
     color: rgb(60, 100, 100);
+}
 }
 /* Contacto fin */
 /* Footer inicio */
 footer{
     background-color: #404040;
     background-image: linear-gradient(0deg, #404040 0%, #d9d9d9 50%, #f2f2f2 100%);
-}
-footer .container{
+
+    & .container{
     text-align: center;
 }
-footer p{
+    & p{
     padding-top: 10px;
 }
-footer a{
+    & a{
     color: cadetblue;
     font-size: 45px;
 }
-footer a:hover{
+    & a:hover{
     color: rgb(60, 100, 100);
+}
 }
 /* Footer fin */
 .subir{
     display: none;
+}
+
+$maps:(
+    cursive: red,
+    fantasy: yellow,
+    serif: blue,
+);
+
+@each $fonts, $colours in $maps {
+    .maps--#{$fonts} {
+        font-size: 25px;
+        color: $colours;
+        font-family: $fonts;
+        text-shadow: 0 0 5px #000;
+    }
+}
+
+.extend{
+    letter-spacing: 3px;
+    color: $color3;
+    font-size: 18px
+}
+.extend--nuevo{
+    @extend .extend;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px #000;
+}
+
+@mixin mixin ($talign, $padding) {
+    text-align: $talign;
+    padding: $padding;
+}
+
+.mixinbox{
+    @include mixin (center, 200px 100px)
 }
 /* Desktop inicio */
 @media only screen and (min-width:979px){
@@ -346,5 +385,40 @@ footer a:hover{
         color: black;
     }
     /* Boton subir fin */
+    
+    $maps:(
+        cursive: red,
+        fantasy: yellow,
+        serif: blue,
+    );
+
+    @each $fonts, $colours in $maps {
+        .maps--#{$fonts} {
+            font-size: 25px;
+            color: $colours;
+            font-family: $fonts;
+            text-shadow: 0 0 5px #000;
+        }
+    }
+
+    .extend{
+        letter-spacing: 3px;
+        color: $color3;
+        font-size: 18px
+    }
+    .extend--nuevo{
+        @extend .extend;
+        color: rgb(0, 0, 0);
+        text-shadow: 0 0 5px #000;
+    }
+
+    @mixin mixin ($talign, $padding) {
+        text-align: $talign;
+        padding: $padding;
+    }
+    
+    .mixinbox{
+        @include mixin (center, 200px 100px)
+    }
 }
 /* Desktop fin */
