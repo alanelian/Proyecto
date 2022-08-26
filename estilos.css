@@ -81,6 +81,7 @@ header {
   background-color: cadetblue;
   border: 2px solid rgb(48, 79, 80);
   border-radius: 7px;
+  padding: 7px;
   transition: all 2.7s;
 }
 #hero a:hover {
@@ -126,8 +127,6 @@ header {
 /* Nuestros trabajos inicio */
 #nuestrosTrabajos {
   background-color: #D9D9D9;
-  color: cadetblue;
-  padding: 10px;
 }
 #nuestrosTrabajos .container {
   text-align: center;
@@ -150,6 +149,7 @@ header {
   background-color: cadetblue;
   border: 1px solid rgb(48, 79, 80);
   border-radius: 7px;
+  padding: 7px;
 }
 #nuestrosTrabajos .titulo {
   grid-area: titulo;
@@ -158,6 +158,9 @@ header {
   padding: 50px;
   margin: 10px;
   border-radius: 10px;
+}
+#nuestrosTrabajos .cards:hover {
+  transform: scale(1.05);
 }
 #nuestrosTrabajos .cards1 {
   height: auto;
@@ -184,33 +187,43 @@ header {
 /* Nuestros trabajos fin */
 /* Portfolio inicio */
 #nuestrosTrabajosPortfolio {
-  background-color: #404040;
+  background-image: url(multimedia/low-poly-grid-haikei.svg);
+  background-position: center;
+  background-size: cover;
 }
 #nuestrosTrabajosPortfolio .container {
-  padding: 150px 50px;
-  text-align: center;
-  height: auto;
+  height: 905px;
 }
 #nuestrosTrabajosPortfolio h2 {
   color: cadetblue;
 }
 #nuestrosTrabajosPortfolio h3 {
-  color: cadetblue;
+  color: #5f9ea0;
+}
+
+.carousel {
+  padding: 50px;
+  align-items: center;
 }
 
 .carousel-inner {
   width: 90%;
   margin: 0 auto;
+  padding-top: 120px;
 }
 
 .carousel-inner .carousel-item img {
-  height: 90vh;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Portfolio fin */
 /* Ubicacion inicio */
 #ubicacion {
-  background-color: #404040;
+  background-image: url(multimedia/low-poly-grid-haikei.svg);
+  background-position: center;
+  background-size: cover;
 }
 #ubicacion .container {
   height: auto;
@@ -221,11 +234,14 @@ header {
   font-weight: bold;
   color: #F2F2F2;
   padding-bottom: 20px;
+  text-shadow: 0 0 5px black;
 }
 #ubicacion p {
+  font-weight: bold;
   font-size: 20px;
   color: #F2F2F2;
   padding-bottom: 50px;
+  text-shadow: 0 0 5px black;
 }
 
 .mapa {
@@ -236,7 +252,9 @@ header {
 /* Ubicacion fin */
 /* Contacto inicio */
 #contacto {
-  background-color: #404040;
+  background-image: url(multimedia/low-poly-grid-haikei.svg);
+  background-position: center;
+  background-size: cover;
 }
 #contacto .container {
   padding: 150px 0px;
@@ -357,6 +375,19 @@ footer a:hover {
     height: 500px;
     width: 500px;
   }
+  #contacto .container {
+    display: flex;
+  }
+  #contacto .img-container {
+    background-image: url(multimedia/contactosvg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 0 10px black;
+    height: 780px;
+    width: 500px;
+    margin-right: 150px;
+  }
   /* Boton subir inicio */
   .subir {
     display: block;
@@ -372,6 +403,7 @@ footer a:hover {
     border-radius: 50%;
     font-size: 25px;
     color: black;
+    text-shadow: 0 0 5px white;
     transition: all 1s;
   }
   .subir:hover {
