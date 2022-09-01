@@ -206,23 +206,32 @@ header{
     background-size: cover;
 
     & .container{
-    height: 905px;
+    height: auto;
 }
     & h2{
-    color: cadetblue;
+    color: #F2F2F2;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
-    & h3{
-    color: #5f9ea0;
-}
+    & p{
+        color: #F2F2F2;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 0 0 5px black;
+        padding-bottom: 10px;
+    }
 }
 .carousel{
-    padding: 50px;
+    padding-bottom: 40px;
     align-items: center;
 }
 .carousel-inner{
     width: 90%;
     margin: 0 auto;
-    padding-top: 120px;
+    // padding-top: 120px;
 }
 .carousel-inner .carousel-item img{
     height: 500px;
@@ -250,7 +259,7 @@ header{
     font-weight: bold;
     font-size: 20px;
     color: #F2F2F2;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     text-shadow: 0 0 5px black;
 }
 }
@@ -370,6 +379,31 @@ $maps:(
     }
     #nuestrosTrabajos p{
         display: block;
+    }
+    #nuestrosTrabajosPortfolio{
+    
+        & .container{
+        height: 905px;
+        // padding-top: 50px;
+    }
+        & h2{
+            padding: 150px 0 20px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #F2F2F2;
+            text-shadow: 0 0 5px black;
+        }
+        & p{
+            color: #F2F2F2;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+            font-size: 20px;
+            padding-bottom: 30px;
+        }
+    }
+    .carousel{
+        padding: 0;
     }
     #ubicacion .mapa{
         height: 500px;
